@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <h1>Automotora</h1>
+      <h1 className="text-3xl font-bold">Automotora</h1>
       <nav className="header__nav"> 
         <ul>
           <li>
