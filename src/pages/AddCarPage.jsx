@@ -39,7 +39,7 @@ const AddCarPage = ({dispatch}) => {
   
   return (
     <section>
-      <PageTitle title='Add Car'/>
+      <PageTitle title='Agregar Auto'/>
       <form onSubmit={handleOnSubmit}>
         <Input label='Modelo' type='text' name='modelo' onChange={handleOnChange}/>
         <Select label='Marca' name='marca' onChange={handleOnChange} options={carBrands}/>

@@ -1,23 +1,27 @@
 import { NavLink } from "react-router-dom";
-import "./Header.sass"
+
+const navStyles = {
+  base: 'text-sm px-2 py-1 block font-medium',
+  active: 'border-b-2 border-b-slate-600'
+}
+
 const Header = () => {
-  
   return (
-    <header className="header mb-10">
+    <header className="header mb-10 flex align-middle py-6">
       <h1 className="text-3xl font-bold">Automotora</h1>
-      <nav className="header__nav"> 
-        <ul>
+      <nav className="ml-auto"> 
+        <ul className="flex align-middle gap-3">
           <li>
-            <NavLink to="/" className={({ isActive }) => (isActive ? 'header__link header__link--active' : 'header__link')}>Home</NavLink>
+            <NavLink to="/" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Inicio</NavLink>
           </li>
           <li>
-            <NavLink to="/car-list" className={({ isActive }) => (isActive ? 'header__link header__link--active' : 'header__link')}>Car List</NavLink>
+            <NavLink to="/car-list" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Listado de Autos</NavLink>
           </li>
           <li>
-            <NavLink to="/add-car" className={({ isActive }) => (isActive ? 'header__link header__link--active' : 'header__link')}>Add Car</NavLink>
+            <NavLink to="/add-car" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Agregar Auto</NavLink>
           </li>
           <li>
-            <NavLink to="/about-us" className={({ isActive }) => (isActive ? 'header__link header__link--active' : 'header__link')}>About us</NavLink>
+            <NavLink to="/about-us" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Nosotros</NavLink>
           </li>
         </ul>
       </nav>
