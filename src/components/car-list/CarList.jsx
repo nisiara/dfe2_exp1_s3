@@ -1,10 +1,10 @@
 const CarList = ({carList, carType}) => {
   const filteredCars = carType 
-    ? carList.filter(car => car.tipo.toLowerCase() === carType.toLowerCase())
+    ? carList.filter(car => car.tipo.toLowerCase() === decodeURIComponent(carType).toLowerCase())
     : carList;
 
   return ( 
-    <div className="grid grid-cols-5 gap-6">
+    <div className={ filteredCars.length > 0 ? 'grid grid-cols-5 gap-6' : 'grid gap-6'}>
       {filteredCars.length > 0 ? (
         filteredCars.map(car => (
           <article key={car.id} className="odd:bg-indigo-50 rounded-md p-2">
@@ -14,7 +14,9 @@ const CarList = ({carList, carType}) => {
           </article>
         ))
       ) : (
-        <p>No se encontraron autos de tipo "{carType}"</p>
+        <div className="bg-red-100 rounded-md px-5 py-2 text-red-900 w-3/5">
+          <p className="text-center">No se encontraron autos de tipo <b>{carType}</b></p>
+        </div>
       )}
     </div>
 

@@ -26,7 +26,7 @@ const App = () => {
   
   
   return (
-    <main className="container mx-auto px-4">
+    <main className="container mx-auto px-4 pb-12">
       <Header/>
       <Routes>
         <Route path="/" element={<HomePage/>} />

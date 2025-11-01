@@ -7,7 +7,6 @@ const CarTypePage = ({carList}) => {
   const carTypes = Object.keys(carsByType);
   const {type} = useParams()
 
-
   return (
     <section>
       <PageTitle title='Listado de autos'/>
