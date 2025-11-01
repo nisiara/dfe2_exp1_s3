@@ -4,7 +4,7 @@ const CarList = ({carList, carType}) => {
     : carList;
 
   return ( 
-    <div className={ filteredCars.length > 0 ? 'grid grid-cols-5 gap-6' : 'grid gap-6'}>
+    <div className={ filteredCars.length > 0 ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6' : 'grid sm:gap-6'}>
       {filteredCars.length > 0 ? (
         filteredCars.map(car => (
           <article key={car.id} className="odd:bg-indigo-50 rounded-md p-2">
@@ -14,8 +14,8 @@ const CarList = ({carList, carType}) => {
           </article>
         ))
       ) : (
-        <div className="bg-red-100 rounded-md px-5 py-2 text-red-900 w-3/5">
-          <p className="text-center">No se encontraron autos de tipo <b>{carType}</b></p>
+        <div className="bg-red-100 rounded-md px-5 py-2 text-red-900 md:w-3/5">
+          <p className="text-center text-sm">No se encontraron autos de tipo <b>{carType}</b></p>
         </div>
       )}
     </div>

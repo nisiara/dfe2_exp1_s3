@@ -7,10 +7,10 @@ const navStyles = {
 
 const Header = () => {
   return (
-    <header className="header mb-10 flex align-middle py-6">
-      <h1 className="text-3xl font-bold">Automotora</h1>
-      <nav className="ml-auto"> 
-        <ul className="flex align-middle gap-3">
+    <header className="header mb-2 md:mb-10 md:flex align-middle py-6">
+      <h1 className="mb-3 md:mb-0 text-center md:text-left text-3xl font-bold">Automotora</h1>
+      <nav className="md:ml-auto"> 
+        <ul className="flex justify-between md:justify-normal align-middle gap-3">
           <li>
             <NavLink to="/" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Inicio</NavLink>
           </li>

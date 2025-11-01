@@ -10,8 +10,8 @@ const CarTypePage = ({carList}) => {
   return (
     <section>
       <PageTitle title='Listado de autos'/>
-      <div className="grid grid-cols-12 gap-10">
-        <aside className="col-span-2">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+        <aside className="col-span-1 md:col-span-2">
           <nav> 
             <ul className="flex flex-col gap-4">
               {carTypes.map(type => (
@@ -22,7 +22,7 @@ const CarTypePage = ({carList}) => {
             </ul>
           </nav>
         </aside>
-        <div className="col-span-10">
+        <div className="col-span-1 md:col-span-10">
           <CarList carList={carList} carType={type}/>
         </div>
       </div>

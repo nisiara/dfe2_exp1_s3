@@ -58,11 +58,12 @@ const AddCarPage = ({dispatch}) => {
         <Button state={!fullfilledForm} text='Agregar automovil'/>
       </form>
       ) : (
-        <div className="bg-green-200 rounded-md px-5 py-2 text-green-900 w-3/5">
-          <p className="mb-2 text-center">
-            {`El auto marca: ${formInputs.marca} modelo: ${formInputs.modelo} se ha agregado con exito`} 
+        <div className="bg-green-200 rounded-md px-5 py-2 text-green-900 md:w-3/5">
+          <p className="text-center text-sm">
+            El auto marca <span className="capitalize font-bold">{formInputs.marca}</span> modelo <span className="capitalize font-bold">{formInputs.modelo}</span> se ha agregado con exito
+            {/* {`El auto marca: ${formInputs.marca} modelo: ${formInputs.modelo} se ha agregado con exito`}  */}
           </p>
-          <Link to={`/type/${formInputs.tipo.toLowerCase()}`} className="font-semibold text-center">Revisalo aquí</Link>
+          <Link to={`/type/${formInputs.tipo.toLowerCase()}`} className="text-sm font-bold text-center block">Revisalo aquí</Link>
         </div>
       )}
       

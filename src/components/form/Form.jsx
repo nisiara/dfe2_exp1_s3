@@ -1,6 +1,6 @@
 const Input = ({label, name, type, onChange }) => {
   return (
-    <div className="mt-4 w-96">
+    <div className="mt-4 w-full md:w-96">
       <label className="uppercase block text-xs font-medium">{label}</label>
       <input className="size-full rounded-md border border-slate-900 px-3 py-2 text-xs h-10 capitalize" name={name} type={type} onChange={onChange}/>
     </div>
@@ -9,7 +9,7 @@ const Input = ({label, name, type, onChange }) => {
 
 const Select = ({label, name, options, onChange}) => {
   return (
-    <div className="mt-4 w-96">
+    <div className="mt-4 w-full md:w-96">
       <label className="uppercase block text-xs font-medium">{label}</label>
       <select className="size-full rounded-md border border-slate-900 px-3 py-2 text-xs h-10 capitalize" name={name} onChange={onChange}>
         <option></option>
@@ -21,7 +21,7 @@ const Select = ({label, name, options, onChange}) => {
 
 const Radio = ({label, input, onChange, name}) => {
   return (
-    <div className="mt-6 w-96">
+    <div className="mt-6 w-full md:w-96">
       <label className="uppercase block text-xs font-medium mb-1">{label}</label>
       <div className="flex align-middle gap-6">
         {input.map((item, index) => {
@@ -37,10 +37,10 @@ const Radio = ({label, input, onChange, name}) => {
   );
 }
 
-const Button = ({state, text, onClick}) => {
+const Button = ({state, text}) => {
   return ( 
-     <button onClick={onClick} disabled={state} className="disabled:opacity-35 w-96 mt-10 p-4 text-xs border rounded-md bg-slate-900 text-white uppercase font-medium">{text}</button>
-   );
+    <button disabled={state} className="disabled:opacity-35 w-full md:w-96 mt-10 p-4 text-xs border rounded-md bg-slate-900 text-white uppercase font-medium">{text}</button>
+  );
 }
 
 export{Input, Select, Radio, Button}
