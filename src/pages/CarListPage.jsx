@@ -2,7 +2,7 @@ import { useParams, NavLink } from "react-router-dom";
 import CarList from "../components/car-list/CarList";
 import {PageTitle} from "../components/common/Common"
 
-const CarTypePage = ({carList}) => {
+const CarListPage = ({carList}) => {
   const carsByType = Object.groupBy(carList, auto => auto.tipo);
   const carTypes = Object.keys(carsByType);
   const {type} = useParams()
@@ -31,4 +31,4 @@ const CarTypePage = ({carList}) => {
  
 }
  
-export default CarTypePage;
+export default CarListPage;

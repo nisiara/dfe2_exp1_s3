@@ -2,7 +2,7 @@ import { useReducer } from "react";
 import Header from "./components/header/Header";
 import HomePage from "./pages/HomePage";
 import { Route, Routes } from "react-router-dom";
-import CarTypePage from "./pages/CarTypePage";
+import CarListPage from "./pages/CarListPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import AddCarPage from "./pages/AddCarPage";
 import data from "../public/data/data";
@@ -30,8 +30,8 @@ const App = () => {
       <Header/>
       <Routes>
         <Route path="/" element={<HomePage/>} />
-        <Route path="/car-list" element={<CarTypePage carList={carList}/>} />
-        <Route path="/type/:type" element={<CarTypePage carList={carList}/>}/>
+        <Route path="/car-list" element={<CarListPage carList={carList}/>} />
+        <Route path="/type/:type" element={<CarListPage carList={carList}/>}/>
         <Route path="/add-car" element={<AddCarPage dispatch={dispatch}/>} />
         <Route path="/about-us" element={<AboutUsPage/>} />
       </Routes>
