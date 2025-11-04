@@ -3,6 +3,7 @@ import Header from "./components/header/Header";
 import HomePage from "./pages/HomePage";
 import { Route, Routes } from "react-router-dom";
 import CarListPage from "./pages/CarListPage";
+import CarDetailsPage from "./pages/CarDetailsPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import AddCarPage from "./pages/AddCarPage";
 import data from "../public/data/data";
@@ -31,6 +32,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/car-list" element={<CarListPage carList={carList}/>} />
+        <Route path="/car-list/:id" element={<CarDetailsPage carList={carList}/>} />
         <Route path="/type/:type" element={<CarListPage carList={carList}/>}/>
         <Route path="/add-car" element={<AddCarPage dispatch={dispatch}/>} />
         <Route path="/about-us" element={<AboutUsPage/>} />

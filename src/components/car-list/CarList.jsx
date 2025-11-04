@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const CarList = ({carList, carType}) => {
   const filteredCars = carType 
     ? carList.filter(car => car.tipo.toLowerCase() === decodeURIComponent(carType).toLowerCase())
@@ -7,11 +9,11 @@ const CarList = ({carList, carType}) => {
     <div className={ filteredCars.length > 0 ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6' : 'grid sm:gap-6'}>
       {filteredCars.length > 0 ? (
         filteredCars.map(car => (
-          <article key={car.id} className="odd:bg-indigo-50 rounded-md p-2">
+          <Link to={`/car-list/${car.id}`} key={car.id} className="odd:bg-indigo-50 rounded-md p-2">
             <h3 className="text-lg font-bold mb-5 capitalize">{car.marca}</h3>
             <h6 className="text-xs font-semibold border-b border-b-slate-300 mb-2 pb-1 capitalize">{car.modelo}</h6>
             <span className="text-xs rounded-sm bg-indigo-200 py-1 px-2 font-normal capitalize">{car.tipo}</span>
-          </article>
+          </Link>
         ))
       ) : (
         <div className="bg-red-100 rounded-md px-5 py-2 text-red-900 md:w-3/5">
