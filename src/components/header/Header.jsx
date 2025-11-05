@@ -18,6 +18,9 @@ const Header = () => {
             <NavLink to="/car-list" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Listado de Autos</NavLink>
           </li>
           <li>
+            <NavLink to="/purchase-option" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Opciones compra</NavLink>
+          </li>
+          <li>
             <NavLink to="/add-car" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Agregar Auto</NavLink>
           </li>
           <li>
