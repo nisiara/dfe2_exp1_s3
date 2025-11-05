@@ -10,8 +10,11 @@ const AddCarPage = ({dispatch}) => {
   const combustible = ['gasolina', 'diesel', 'eléctrico', 'híbrido']
   const transmision = ['automática', 'manual', 'cvt']
 
+  const date = new Date();
+  const timestamp = date.getTime();
+  
   const INITIAL_FORM_STATE = {
-    id: new Date().toDateString(),
+    id: timestamp,
     modelo: '',
     marca: '',
     tipoCombustible: '',
@@ -31,7 +34,6 @@ const AddCarPage = ({dispatch}) => {
     const isFormValid = Object.values(updatedInputs).every(input => input !== '' && input !== undefined)
     setFullfilledForm(isFormValid)
   }
-
 
   function handleOnSubmit(event){
     event.preventDefault()
@@ -71,5 +73,4 @@ const AddCarPage = ({dispatch}) => {
   );
 }
 
- 
 export default AddCarPage;
