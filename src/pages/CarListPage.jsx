@@ -3,7 +3,7 @@ import CarList from "../components/car-list/CarList";
 import {PageTitle} from "../components/common/Common"
 
 const CarListPage = ({carList}) => {
-  const carsByType = Object.groupBy(carList, auto => auto.tipo);
+  const carsByType = Object.groupBy(carList.listaCompletaAutos, auto => auto.tipo);
   const carTypes = Object.keys(carsByType);
   const {type} = useParams()
 

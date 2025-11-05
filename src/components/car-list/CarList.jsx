@@ -3,12 +3,12 @@ import Filter from "../filter/Filter"
 
 const CarList = ({carList, carType}) => {
   const filteredCars = carType 
-    ? carList.filter(car => car.tipo.toLowerCase() === decodeURIComponent(carType).toLowerCase())
-    : carList;
+    ? carList.listaCompletaAutos.filter(car => car.tipo.toLowerCase() === decodeURIComponent(carType).toLowerCase())
+    : carList.listaCompletaAutos;
 
   return ( 
     <div>
-      <Filter carList={carList} />
+      {/* <Filter carList={carList} /> */}
       <div className={ filteredCars.length > 0 ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6' : 'grid sm:gap-6'}>
         {filteredCars.length > 0 ? (
           filteredCars.map(car => (
