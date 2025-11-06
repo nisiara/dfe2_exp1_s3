@@ -12,10 +12,10 @@
 
 ### 📎 Opcionales
 - [ ] **Opcionales**
-  - [ ] Usar React.lazy()
-  - [ ] Usar Suspense
+  - [x] Usar React.lazy()
+  - [x] Usar Suspense
   - [ ] Crear footer
 - [x] **Usar Taildwind**
-- [ ] **Crear archivo de enrutamiento centralizado**
+- [x] **Crear archivo de enrutamiento centralizado**
 - [x] **Utilizar rutas anidadas**
 - [ ] **Usar componentes Layout**
