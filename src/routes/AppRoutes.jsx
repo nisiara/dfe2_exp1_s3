@@ -9,6 +9,7 @@ const AddCarPage = React.lazy(() => import("../pages/AddCarPage"));
 const AboutUsPage = React.lazy(() => import("../pages/AboutUsPage"));
 
 const AppRoutes = ({ carList, dispatch }) => {
+
   return (
     <Suspense fallback={<div className="p-4">Cargando...</div>}>
       <Routes>
