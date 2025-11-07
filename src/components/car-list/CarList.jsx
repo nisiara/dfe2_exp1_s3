@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 const CarList = ({carList}) => {
 
   return ( 
-    <div>
-      <div className={ carList.listaAutosFiltrados.length > 0 ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6' : 'grid sm:gap-6'}>
+    <>
+      <div className={ carList.listaAutosFiltrados.length > 0 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6' : 'grid sm:gap-6'}>
         {carList.listaAutosFiltrados.length > 0 ? (
           carList.listaAutosFiltrados.map(car => (
             <Link to={`/car-list/${car.id}`} key={car.id} className="odd:bg-indigo-50 rounded-md p-2">
@@ -19,7 +19,7 @@ const CarList = ({carList}) => {
           </div>
         )}
       </div>
-    </div>
+    </>
 
   );
 }

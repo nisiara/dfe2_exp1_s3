@@ -15,13 +15,13 @@ const Header = () => {
             <NavLink to="/" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Inicio</NavLink>
           </li>
           <li>
-            <NavLink to="/car-list" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Listado de Autos</NavLink>
+            <NavLink to="/car-list" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Lista de Vehículos</NavLink>
           </li>
           <li>
-            <NavLink to="/purchase-option" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Opciones compra</NavLink>
+            <NavLink to="/purchase-option" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Opciones de Compra</NavLink>
           </li>
           <li>
-            <NavLink to="/add-car" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Agregar Auto</NavLink>
+            <NavLink to="/add-car" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Agregar Vehículo</NavLink>
           </li>
           <li>
             <NavLink to="/about-us" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Nosotros</NavLink>

@@ -49,7 +49,7 @@ const AddCarPage = ({dispatch}) => {
   
   return (
     <section>
-      <PageTitle title='Agregar Auto'/>
+      <PageTitle title='Agregar Vehículo'/>
       {!addedCar ? (
         <form onSubmit={handleOnSubmit} className="w-full md:w-96">
         <Input label='Modelo' type='text' name='modelo' onChange={handleOnChange}/>
