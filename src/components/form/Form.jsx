@@ -1,18 +1,18 @@
 const Input = ({label, name, type, onChange }) => {
   return (
-    <div className="mt-4 w-full md:w-96">
+    <div className="mt-4 w-full">
       <label className="uppercase block text-xs font-medium">{label}</label>
       <input className="size-full rounded-md border border-slate-900 px-3 py-2 text-xs h-10 capitalize" name={name} type={type} onChange={onChange}/>
     </div>
   );
 }
 
-const Select = ({label, name, options, onChange}) => {
+const Select = ({label, name, options, onChange, all}) => {
   return (
-    <div className="mt-4 w-full md:w-96">
+    <div className="mt-4 w-full">
       <label className="uppercase block text-xs font-medium">{label}</label>
       <select className="size-full rounded-md border border-slate-900 px-3 py-2 text-xs h-10 capitalize" name={name} onChange={onChange}>
-        <option></option>
+        {all ? <option value='todos'>Todos</option> : <option></option>}
         {options?.map((option, index) => <option key={index}>{option}</option>)}
     </select>
     </div>
@@ -21,7 +21,7 @@ const Select = ({label, name, options, onChange}) => {
 
 const Radio = ({label, input, onChange, name}) => {
   return (
-    <div className="mt-6 w-full md:w-96">
+    <div className="mt-6 w-full">
       <label className="uppercase block text-xs font-medium mb-1">{label}</label>
       <div className="flex align-middle gap-6">
         {input.map((item, index) => {

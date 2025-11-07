@@ -8,11 +8,15 @@ import carReducer from "./reducers/car-reducer";
 const App = () => {
   const STATE = {
     listaCompletaAutos: data,
-    listaAutosOpcionCompra: []
+    listaAutosOpcionCompra: [],
+    listaAutosFiltrados: data,
+    filerValues: {
+      marca: '',
+      tipo: ''
+    }
   }
 
   const [carList, dispatch] = useReducer(carReducer, STATE)
-  
   
   return (
     <main className="container mx-auto px-4 pb-12">

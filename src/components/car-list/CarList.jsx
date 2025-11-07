@@ -1,17 +1,12 @@
 import { Link } from "react-router-dom";
-import Filter from "../filter/Filter"
 
-const CarList = ({carList, carType}) => {
-  const filteredCars = carType 
-    ? carList.listaCompletaAutos.filter(car => car.tipo.toLowerCase() === decodeURIComponent(carType).toLowerCase())
-    : carList.listaCompletaAutos;
+const CarList = ({carList}) => {
 
   return ( 
     <div>
-      {/* <Filter carList={carList} /> */}
-      <div className={ filteredCars.length > 0 ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6' : 'grid sm:gap-6'}>
-        {filteredCars.length > 0 ? (
-          filteredCars.map(car => (
+      <div className={ carList.listaAutosFiltrados.length > 0 ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6' : 'grid sm:gap-6'}>
+        {carList.listaAutosFiltrados.length > 0 ? (
+          carList.listaAutosFiltrados.map(car => (
             <Link to={`/car-list/${car.id}`} key={car.id} className="odd:bg-indigo-50 rounded-md p-2">
               <h3 className="text-lg font-bold mb-5 capitalize">{car.marca}</h3>
               <h6 className="text-xs font-semibold border-b border-b-slate-300 mb-2 pb-1 capitalize">{car.modelo}</h6>
@@ -20,7 +15,7 @@ const CarList = ({carList, carType}) => {
           ))
         ) : (
           <div className="bg-red-100 rounded-md px-5 py-2 text-red-900 md:w-3/5">
-            <p className="text-center text-sm">No se encontraron autos de tipo <b>{carType}</b></p>
+            <p className="text-center text-sm">No se encontraron autos</p>
           </div>
         )}
       </div>

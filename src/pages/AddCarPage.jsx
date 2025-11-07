@@ -51,7 +51,7 @@ const AddCarPage = ({dispatch}) => {
     <section>
       <PageTitle title='Agregar Auto'/>
       {!addedCar ? (
-        <form onSubmit={handleOnSubmit}>
+        <form onSubmit={handleOnSubmit} className="w-full md:w-96">
         <Input label='Modelo' type='text' name='modelo' onChange={handleOnChange}/>
         <Select label='Marca' name='marca' onChange={handleOnChange} options={carBrands}/>
         <Select label='Tipo' name='tipo' onChange={handleOnChange} options={carTypes}/>

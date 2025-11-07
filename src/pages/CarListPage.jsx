@@ -1,29 +1,33 @@
-import { useParams, NavLink } from "react-router-dom";
 import CarList from "../components/car-list/CarList";
 import {PageTitle} from "../components/common/Common"
+import { Select } from "../components/form/Form";
 
-const CarListPage = ({carList}) => {
-  const carsByType = Object.groupBy(carList.listaCompletaAutos, auto => auto.tipo);
-  const carTypes = Object.keys(carsByType);
-  const {type} = useParams()
+const CarListPage = ({carList, dispatch}) => {
+
+  const uniqueBrandList = Array.from(new Set(carList.listaCompletaAutos.map(car => car.marca)))
+  const uniqueTypeList = Array.from(new Set(carList.listaCompletaAutos.map(car => car.tipo)))
+
+  function handleFilterChange(event){
+    dispatch({
+      type: 'APPLY_FILTER',
+      payload: {
+        type: event.target.name,
+        value: event.target.value
+      }
+    })
+  }
+
 
   return (
     <section>
       <PageTitle title='Listado de autos'/>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
         <aside className="col-span-1 md:col-span-2">
-          <nav> 
-            <ul className="flex flex-col gap-4">
-              {carTypes.map(type => (
-                <li key={type}>
-                  <NavLink to={`/type/${type.toLowerCase()}`} className={({isActive}) => `capitalize text-sm px-2 py-1 block font-medium ${isActive ? 'border-b-2 border-b-slate-600' : ''}`}>{type}</NavLink>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <Select all label="Marca" name="marca" options={uniqueBrandList} onChange={(event) => handleFilterChange(event)}/>
+          <Select all label="Tipo" name="tipo" options={uniqueTypeList} onChange={(event) => handleFilterChange(event)}/>
         </aside>
         <div className="col-span-1 md:col-span-10">
-          <CarList carList={carList} carType={type}/>
+          <CarList carList={carList} />
         </div>
       </div>
     </section>
