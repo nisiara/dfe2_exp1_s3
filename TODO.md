@@ -15,7 +15,7 @@
 
 - [x] ****Usar React.lazy()**
 - [x] ****Usar Suspense**
-- [ ] ****Loading component**
+- [x] ****Loading component**
 - [ ] ****Crear footer**
 - [x] **Usar Taildwind**
 - [x] **Crear archivo de enrutamiento centralizado**
