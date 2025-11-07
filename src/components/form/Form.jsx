@@ -7,14 +7,18 @@ const Input = ({label, name, type, onChange }) => {
   );
 }
 
-const Select = ({label, name, options, onChange, all}) => {
+const Select = ({firstOption, label, name, options, onChange, allOption, value}) => {
   return (
     <div className="mt-4 w-full">
-      <label className="uppercase block text-xs font-medium">{label}</label>
-      <select className="size-full rounded-md border border-slate-900 px-3 py-2 text-xs h-10 capitalize" name={name} onChange={onChange}>
-        {all ? <option value='todos'>Todos</option> : <option></option>}
-        {options?.map((option, index) => <option key={index}>{option}</option>)}
-    </select>
+      <label className="uppercase block text-xs font-medium">{label}
+        <select className="size-full rounded-md border border-slate-900 px-3 py-2 text-xs h-10 capitalize" name={name} onChange={onChange} value={value}>
+          {allOption 
+            ? <option value='todos'>{firstOption}</option> 
+            : <option value=''></option>
+          }
+          {options?.map((option, index) => <option key={index} value={option}>{option}</option>)}
+      </select>
+      </label>
     </div>
   );
 }
