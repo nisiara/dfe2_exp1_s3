@@ -10,7 +10,7 @@ const App = () => {
     listaCompletaAutos: data,
     listaAutosOpcionCompra: [],
     listaAutosFiltrados: data,
-    filerValues: {
+    filterValues: {
       marca: '',
       tipo: ''
     }
