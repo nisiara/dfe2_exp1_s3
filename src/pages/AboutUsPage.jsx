@@ -5,13 +5,9 @@ const AboutUsPage = () => {
   return (  
     <section>
       <PageTitle title='Nosotros'/>
-      <h4 className="font-medium text-lg mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur doloremque totam mollitia sit magnam error expedita, alias eaque incidunt, eveniet velit ex quam repellendus distinctio placeat illo eligendi aliquid quisquam.</h4>
-      <p className="font-light text-sm leading-5 mb-3">Necessitatibus, facere quibusdam et iusto reiciendis adipisci libero enim fugit a, ex consequatur quo consequuntur? Consequuntur magni, dignissimos odit alias iure enim.
-      Rerum, voluptate placeat quia officiis ipsa laboriosam, aliquam facere blanditiis illum cupiditate excepturi unde nemo culpa saepe quisquam enim quo ullam. Ea, ad mollitia autem assumenda dicta modi fugiat enim!
-      Similique consectetur expedita repellendus. Exercitationem, autem consequatur perferendis obcaecati eligendi culpa iste voluptates sunt vero? Unde nesciunt quos sit neque inventore rerum ipsum esse ducimus eos veritatis odit, enim nostrum?</p>
-      <p className="font-light text-sm leading-5 mb-3">Necessitatibus, facere quibusdam et iusto reiciendis adipisci libero enim fugit a, ex consequatur quo consequuntur? Consequuntur magni, dignissimos odit alias iure enim.
-      Rerum, voluptate placeat quia officiis ipsa laboriosam, aliquam facere blanditiis illum cupiditate excepturi unde nemo culpa saepe quisquam enim quo ullam. Ea, ad mollitia autem assumenda dicta modi fugiat enim!
-      Similique consectetur expedita repellendus. Exercitationem, autem consequatur perferendis obcaecati eligendi culpa iste voluptates sunt vero? Unde nesciunt quos sit neque inventore rerum ipsum esse ducimus eos veritatis odit, enim nostrum?</p>
+      <h4 className="font-medium text-lg mb-4">En Automotora <b>Vanguardia Motor</b>, creemos que cada viaje comienza con la elección correcta. Desde nuestros inicios, nos hemos dedicado a ser más que un concesionario: somos tu socio en la carretera.</h4>
+      <p className="font-light text-sm leading-5 mb-3">Nacidos de una profunda pasión por la ingeniería y el diseño automotriz, nuestra misión siempre ha sido clara: ofrecer vehículos de la más alta calidad y un servicio que inspire total confianza. Nuestro equipo está compuesto por expertos dedicados que viven y respiran la cultura del motor, asegurando que cada auto en nuestra vitrina cumpla con los estándares más rigurosos de seguridad y rendimiento. Nos enorgullece guiar a nuestros clientes a través de un proceso de compra transparente, sin presiones y enfocado en encontrar el vehículo que se ajuste perfectamente a sus necesidades de vida y presupuesto.</p>
+      <p className="font-light text-sm leading-5 mb-3">Más allá de la venta, nuestro compromiso se extiende a construir una relación duradera con cada conductor que pasa por nuestras puertas. Ofrecemos un servicio posventa integral, incluyendo mantenimiento especializado y repuestos originales, garantizando que tu inversión se mantenga en óptimas condiciones por muchos años. Te invitamos a visitarnos y experimentar la diferencia que hace un equipo verdaderamente apasionado por lo que hace. En <b>Vanguardia Motor</b>, no solo vendemos autos; movemos futuros y te ayudamos a tomar el control de tu próximo gran recorrido.</p>
     </section>
 
    );

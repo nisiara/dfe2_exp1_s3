@@ -8,7 +8,7 @@ const navStyles = {
 const Header = () => {
   return (
     <header className="header mb-2 md:mb-10 md:flex align-middle py-6">
-      <h1 className="mb-3 md:mb-0 text-center md:text-left text-3xl font-bold">Automotora</h1>
+      <h1 className="mb-3 md:mb-0 text-center md:text-left text-3xl font-bold">Vanguardia Motor</h1>
       <nav className="md:ml-auto"> 
         <ul className="flex justify-between md:justify-normal align-middle gap-3">
           <li>
