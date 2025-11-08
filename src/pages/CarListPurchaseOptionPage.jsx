@@ -20,7 +20,7 @@ const CarListPurchaseOptionPage = ({carList, dispatch}) => {
               </article>
             ))
           ) : (
-            <div className="bg-yellow-100 rounded-md px-5 py-2 text-yellow-900 md:w-3/5">
+            <div className="bg-yellow-100 rounded-md px-5 py-2 text-yellow-900">
               <p className="text-center text-sm">Todavía no agregas vehículos a la lista.</p>
             </div>
           )}

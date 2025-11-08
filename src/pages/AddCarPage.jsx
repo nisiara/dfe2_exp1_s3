@@ -61,7 +61,7 @@ const AddCarPage = ({dispatch}) => {
       </form>
       ) : (
         <>
-        <div className="bg-green-200 rounded-md px-5 py-2 text-green-900 md:w-3/5">
+        <div className="bg-green-200 rounded-md px-5 py-2 text-green-900">
           <p className="text-center text-sm">
             El auto marca <span className="capitalize font-bold">{formInputs.marca}</span> modelo <span className="capitalize font-bold">{formInputs.modelo}</span> se ha agregado con exito
           </p>

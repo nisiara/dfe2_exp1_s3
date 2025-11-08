@@ -26,7 +26,7 @@ const CarDetailsPage = ({carList, dispatch}) => {
           <Link to="/car-list" className="mt-5 block text-sm text-center">Volver a la <span className="underline">Lista de Vehículos</span></Link>
         </>
       ) : (
-        <div className={`rounded-md px-5 py-2 md:w-3/5 ${FIND_IN_LIST ? 'bg-green-100 text-green-900 ' : 'bg-red-100 text-red-900 '}`}>
+        <div className={`rounded-md px-5 py-2 ${FIND_IN_LIST ? 'bg-green-100 text-green-900 ' : 'bg-red-100 text-red-900 '}`}>
           <p className="text-center text-sm">
             {FIND_IN_LIST ? 'El vehículo ha sido guardado en la lista "Opciones de Compra"' : `El vehículo con el id: ${id} no existe.`}
           </p>

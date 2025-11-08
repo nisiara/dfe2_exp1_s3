@@ -23,7 +23,7 @@ const CarList = ({carList}) => {
         )}
 
         {RENDER_CAR_LIST.length === 0 && (
-          <div className="bg-red-100 rounded-md px-5 py-2 text-red-900 md:w-3/5">
+          <div className="bg-red-100 rounded-md px-5 py-2 text-red-900">
             <p className="text-center text-sm">No se encontraron autos</p>
           </div>
       )}
