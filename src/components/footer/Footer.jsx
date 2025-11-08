@@ -10,12 +10,12 @@ const Footer = () => {
           <small className="block leading-1 md:w-3/6 font-light">Nacidos de una profunda pasión por la ingeniería y el diseño automotriz, nuestra misión siempre ha sido clara: ofrecer vehículos de la más alta calidad y un servicio que inspire total confianza.</small>
         </aside>
         <nav className="col-span-1 sm:col-span-6 lg:col-span-3">
-          <ul>
-            <li><Link className="underline text-xs capitalize text-right block" to="/">Inicio</Link></li>
-            <li><Link className="underline text-xs capitalize text-right block mt-1" to="/car-list" end>Lista de Vehículos</Link></li>
-            <li><Link className="underline text-xs capitalize text-right block mt-1" to="/purchase-option">Opciones de Compra</Link></li>
-            <li><Link className="underline text-xs capitalize text-right block mt-1" to="/add-car">Agregar Vehículo</Link></li>
-            <li><Link className="underline text-xs capitalize text-right block mt-1" to="/about-us">Nosotros</Link></li>
+          <ul className="flex flex-col sm:justify-between md:block gap-2 sm:gap-1">
+            <li><Link className="underline text-xs capitalize text-left sm:text-right block mt-1" to="/">Inicio</Link></li>
+            <li><Link className="underline text-xs capitalize text-left sm:text-right block mt-1" to="/car-list" end>Lista de Vehículos</Link></li>
+            <li><Link className="underline text-xs capitalize text-left sm:text-right block mt-1" to="/purchase-option">Opciones de Compra</Link></li>
+            <li><Link className="underline text-xs capitalize text-left sm:text-right block mt-1" to="/add-car">Agregar Vehículo</Link></li>
+            <li><Link className="underline text-xs capitalize text-left sm:text-right block mt-1" to="/about-us">Nosotros</Link></li>
           </ul>
         </nav>
       </div>

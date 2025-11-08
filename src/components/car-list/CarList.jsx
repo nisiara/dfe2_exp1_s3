@@ -2,17 +2,22 @@ import { Link } from "react-router-dom";
 
 const CarList = ({carList}) => {
 
-  const RENDER_CAR_LIST = carList.listaAutosFiltrados.length > 0
+  const hasActiveFilters = carList.filterValues.marca !== '' && carList.filterValues.marca !== 'todos' ||
+                           carList.filterValues.tipo !== '' && carList.filterValues.tipo !== 'todos';
+
+  
+  const RENDER_CAR_LIST = hasActiveFilters
     ? carList.listaAutosFiltrados
     : carList.listaCompletaAutos;
 
-  const gridClasses = carList.listaCompletaAutos.length > 0
+  const gridClasses = RENDER_CAR_LIST.length > 0
     ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'
     : 'grid sm:gap-6';
 
   return ( 
     <>
       <div className={gridClasses}>
+        
         {RENDER_CAR_LIST.map(car => (
           <Link to={`/car-list/${car.id}`} key={car.id} className="odd:bg-indigo-50 rounded-md p-2">
             <h3 className="text-lg font-bold mb-5 capitalize">{car.marca}</h3>
@@ -22,11 +27,11 @@ const CarList = ({carList}) => {
           )
         )}
 
-        {RENDER_CAR_LIST.length === 0 && (
+        {(RENDER_CAR_LIST.length === 0 ) && (
           <div className="bg-red-100 rounded-md px-5 py-2 text-red-900">
-            <p className="text-center text-sm">No se encontraron autos</p>
+            <p className="text-center text-sm">No se encontraron autos con los filtros seleccionados.</p>
           </div>
-      )}
+        )}
       </div>
     </>
 

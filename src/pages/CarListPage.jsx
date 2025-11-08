@@ -1,6 +1,7 @@
 import CarList from "../components/car-list/CarList";
 import {PageTitle} from "../components/common/Common"
-import { Select } from "../components/form/Form";;
+import { Select } from "../components/form/Form"
+
 
 const CarListPage = ({carList, dispatch}) => {
   const uniqueBrandList = Array.from(new Set(carList.listaCompletaAutos.map(car => car.marca)))

@@ -13,22 +13,38 @@ export default function carReducer(appState ,action){
         const ID_CAR = action.payload
         const SELECTED_CAR = appState.listaCompletaAutos.find( car => String(car.id) === ID_CAR )
         const UPDATED_GLOBAL_LIST = appState.listaCompletaAutos.filter( car => String(car.id) !== ID_CAR)
-        const UPDATED_FILTERED_LIST = appState.listaAutosFiltrados.filter( car => String(car.id) !== ID_CAR)
+        
+        const {marca, tipo} = appState.filterValues
+        const FILTERED_LIST = UPDATED_GLOBAL_LIST.filter( car => {
+          if (marca && String(marca).toLowerCase() !== 'todos' && car.marca !== marca) return false
+          if (tipo && String(tipo).toLowerCase() !== 'todos' && car.tipo !== tipo) return false
+          return true
+        })
+  
         return {
           ...appState,
           listaCompletaAutos: UPDATED_GLOBAL_LIST,
-          listaAutosFiltrados: UPDATED_FILTERED_LIST,
+          listaAutosFiltrados: FILTERED_LIST,
           listaAutosOpcionCompra: [...appState.listaAutosOpcionCompra, SELECTED_CAR]
         }
       }
 
       case 'REMOVE_FROM_PURCHASE_OPTION':{
         const SELECTED_CAR = action.payload
+        const UPDATED_GLOBAL_LIST = [...appState.listaCompletaAutos, SELECTED_CAR]
         const UPDATED_LIST = appState.listaAutosOpcionCompra.filter( car => car.id !== SELECTED_CAR.id)
+        
+        const {marca, tipo} = appState.filterValues
+        const FILTERED_LIST = UPDATED_GLOBAL_LIST.filter( car => {
+          if (marca && String(marca).toLowerCase() !== 'todos' && car.marca !== marca) return false
+          if (tipo && String(tipo).toLowerCase() !== 'todos' && car.tipo !== tipo) return false
+          return true
+        })
+        
         return {
           ...appState,
-          listaCompletaAutos: [...appState.listaCompletaAutos, SELECTED_CAR],
-          listaAutosFiltrados: [...appState.listaAutosFiltrados, SELECTED_CAR],
+          listaCompletaAutos: UPDATED_GLOBAL_LIST,
+          listaAutosFiltrados: FILTERED_LIST,
           listaAutosOpcionCompra: UPDATED_LIST
         }
       }
@@ -36,7 +52,7 @@ export default function carReducer(appState ,action){
       case 'APPLY_FILTER':{
         const {type, value} = action.payload
         const updateFilterValues = {...appState.filterValues, [type]: value }
-        const filteredCarList = appState.listaCompletaAutos.filter( car => {
+        const FILTERED_LIST = appState.listaCompletaAutos.filter( car => {
           const {marca, tipo} = updateFilterValues
 
           if (marca && String(marca).toLowerCase() !== 'todos' && car.marca !== marca) return false
@@ -47,7 +63,7 @@ export default function carReducer(appState ,action){
         return {
           ...appState,
           filterValues: updateFilterValues,
-          listaAutosFiltrados: filteredCarList
+          listaAutosFiltrados: FILTERED_LIST
         }
       }
      
