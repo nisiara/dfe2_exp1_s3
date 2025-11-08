@@ -15,10 +15,8 @@
 
 - [x] ****Usar React.lazy()**
 - [x] ****Usar Suspense**
-- [x] ****Loading component**
-- [ ] ****Crear footer**
+- [x] **Loading component**
+- [x] **Crear footer**
 - [x] **Usar Taildwind**
 - [x] **Crear archivo de enrutamiento centralizado**
 - [x] **Utilizar rutas anidadas**
-- [ ] **Usar componentes Layout**
-- [ ] **Agregarle un etiqueta gráfica a vehículos marcados como 'Posible Compra'** 
