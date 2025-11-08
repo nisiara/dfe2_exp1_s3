@@ -12,7 +12,7 @@ const Header = () => {
       <nav className="md:ml-auto"> 
         <ul className="flex justify-between md:justify-normal align-middle gap-3">
           <li>
-            <NavLink to="/" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Inicio</NavLink>
+            <NavLink to="" className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Inicio</NavLink>
           </li>
           <li>
             <NavLink to="/car-list" end className={({isActive}) => `${navStyles.base} ${isActive ? navStyles.active : ''}`}>Lista de Vehículos</NavLink>
